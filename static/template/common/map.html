@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Hotsun electron gift company</title>
+<meta name="Keywords" content="electron company, gift company, electron gift factory">
+<meta name="Description" content="Hotsun dedicated in electronic gift products ,USB flash drive, smart watch, SD card, sport cameras, dash cameras, makeup brush holder and others gift products.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<style type="text/css">
+    #nav, #content, #footer{padding: 8px; border: 1px solid #EEEEEE; clear: both; width: 95%; margin: auto; margin-top: 10px;padding-left: 20px;}
+    a {color: #333333;}
+</style>
+</head>
+
+<body>
+<h2 style="text-align:center; margin-top:20px">HOTSUN SiteMap</h2>
+<div id="nav"><a href="http://www.hkhotsun.com">
+    <strong>HOTSUN</strong></a>  &raquo; <a href="http://www.hkhotsun.com/sitemap.html">SiteMap</a>
+</div>
+<div id="content">
+    <h4>PRODUCTS</h4>
+    <ul>
+        #for(product : productList)
+        <li><a href="http://www.hkhotsun.com/product/#(product.pro_id).html">#(product.pro_name)</a></li>
+        #end
+    </ul>
+</div>
+<div id="content">
+    <h4>CATALOGUE</h4>
+    #for(type : typeList)
+    #if(type.prot_pid==0 && for.count==1)
+    <ul>
+        <li>#(type.prot_name)</li>
+        <ul>
+    #elseif(type.prot_pid==0 && for.count!=1)
+        </ul>
+    </ul>
+    <ul>
+        <li>#(type.prot_name)</li>
+        <ul>
+    #else
+            <li><a href="http://www.hkhotsun.com/class/#(type.prot_id).html">#(type.prot_name)</a></li>
+    #end
+    #end
+        </ul>
+    </ul>
+</div>
+<div id="content">
+    <h4>COLUMN</h4>
+    <ul>
+        <li><a href="http://www.hkhotsun.com/product.html">PRODUCTS</a></li>
+        <li><a href="http://www.hkhotsun.com/service.html">SERVICE</a></li>
+        <li><a href="http://www.hkhotsun.com/news.html">NEWS</a></li>
+        <li><a href="http://www.hkhotsun.com/about.html">ABOUT</a></li>
+    </ul>
+</div>
+<div id="footer">HOMEPAGE: <strong><a href="http://www.hkhotsun.com">HOTSUN</a></strong></div><br />
+
+</body>
+
+</html>
