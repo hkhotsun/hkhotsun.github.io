@@ -154,8 +154,6 @@ body {
   -webkit-text-size-adjust: none;
   text-align: justify;
   min-width: 1000px;
-  background-image: url("/static/img/bg.jpg");
-  background-size: cover;
 }
 .container {
   width: 1000px;
