@@ -1,0 +1,112 @@
+*{
+	font-size:12px;
+}
+body {
+	font-family: "Century Gothic",helvetica,tahoma,"Microsoft yahei";
+    padding:20px;
+    font-size:13px;
+    margin:0;
+}
+h2 {
+    font-size:18px;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+
+
+.navs a{
+	padding-left:20px; line-height:28px; display:block; background:url("themes/icons/icon_1.png") no-repeat left;
+}
+
+a 	{ color:#777;text-decoration:none;}
+a:hover	{ color:#000;}
+
+.loginTb {
+	margin: 0 auto;
+	height: 200px;
+}
+
+.loginTb th {
+	width: 37%;
+	line-height: 16px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.captcha {
+	height: 45px;
+	width: 95px;
+	vertical-align: bottom;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.editTable { 
+	border-collapse:collapse;  
+	border-spacing:0;
+	border-left:1px solid #dfdfdf;
+	border-top: 1px solid #dfdfdf;
+	width:100%;
+}
+
+.editTable td,.editTable th	{ padding:5px; border-right:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf;}
+
+.editTable th	{ background:#efefef;white-space:nowrap; }
+.editTable td h5	{ display:inline-block;width:130px; height:30px; margin:0px; padding:0px; font-weight:normal;}
+.editTable td h6	{ display:inline-block;width:auto; height:30px; margin:0px 3px; padding:0px; font-weight:normal;}
+.editTable em	{ padding-left:5px;color:red;}
+.datagrid_img{ position: absolute; z-index: 999;}
+
+#offlinetb,#onlinetb {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#offlinetb li,#onlinetb li {
+	list-style-type: none;
+	margin: 0 5px 5px 5px;
+	padding: 5px;
+	width: 180px;
+	height:20px;
+	font-size: 14px;
+	float:left;
+}
+
+.sortdefault {
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6;
+}
+
+.sortonline {
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #fcefa1;
+	background: #fbf9ee;
+}
+
+.plus {
+	cursor: pointer;
+	display: block;
+	width: 19px;
+	height: 19px;
+	float: right;
+	margin-right: 0;
+	margin-top: 0;
+	background: url(../js/easyui/themes/icons/plus.jpg) no-repeat;
+}
+
+.minus {
+	cursor: pointer;
+	display: block;
+	width: 19px;
+	height: 19px;
+	float: right;
+	margin-right: 0;
+	margin-top: 0;
+	background: url(../js/easyui/themes/icons/minus.jpg) no-repeat;
+}

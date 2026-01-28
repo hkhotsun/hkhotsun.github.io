@@ -154,6 +154,9 @@ body {
   -webkit-text-size-adjust: none;
   text-align: justify;
   min-width: 1000px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .container {
   width: 1000px;
@@ -257,6 +260,7 @@ body {
   height: 245px;
   background-color: #0062ad;
   color: #fff;
+  flex-shrink: 0;
 }
 #footer a {
   color: #fff;
@@ -283,6 +287,7 @@ body {
   color: #fff;
   font-family: \5B8B\4F53, sans-serif;
   margin-top: 0;
+  flex-shrink: 0;
 }
 .bor {
   border: 1px solid;
