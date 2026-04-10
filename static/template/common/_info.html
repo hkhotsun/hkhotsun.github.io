@@ -38,11 +38,11 @@
     <div id="nav">
         <div class="container">
             <ul>
-                <li><a href="#(CONTEXT_PATH)/">HOME</a></li>
-                <li class="actived"><a href="#(CONTEXT_PATH)/product.html">PRODUCTS</a></li>
-                <li><a href="#(CONTEXT_PATH)/service.html">SERVICE</a></li>
-                <li><a href="#(CONTEXT_PATH)/news.html">NEWS</a></li>
-                <li><a href="#(CONTEXT_PATH)/about.html">ABOUT</a></li>
+                <li #if(channel.cha_link=='index.html' )class="actived" #end><a href="#(CONTEXT_PATH)/">HOME</a></li>
+                <li #if(channel.cha_link=='list.html' )class="actived" #end><a href="#(CONTEXT_PATH)/product.html">PRODUCTS</a></li>
+                <li #if(channel.cha_link=='service.html' )class="actived" #end><a href="#(CONTEXT_PATH)/service.html">E-CATALOG</a></li>
+                <li #if(channel.cha_link=='news.html' )class="actived" #end><a href="#(CONTEXT_PATH)/news.html">NEWS</a></li>
+                <li #if(channel.cha_link=='about.html' )class="actived" #end><a href="#(CONTEXT_PATH)/about.html">CONTACTION</a></li>
             </ul>
         </div>
     </div>
@@ -53,7 +53,7 @@
         <div style="margin: 0 auto; width:1200px;">
             <ul>
                 <li><span>OUR SERVICE</span></li>
-                <li><a href="#(CONTEXT_PATH)/service.html"> About us </a></li>
+                <li><a href="#(CONTEXT_PATH)/service.html"> E-catalog </a></li>
                 <li><a href="#(CONTEXT_PATH)/service.html"> Our Company </a></li>
                 <li><a href="#(CONTEXT_PATH)/service.html"> Our Exhibitions </a></li>
                 <li><a href="#(CONTEXT_PATH)/service.html"> Our Certificates </a></li>
@@ -90,13 +90,13 @@
     <div id="footer_ied">
         <div class="container">
             HOTSUN CO., LIMITED
-            &nbsp;<a style="color:#FFFFFF;" href="http://www.hkhotsun.com/sitemap.html" title="HOTSUN SiteMap">SiteMap</a>
+            &nbsp;<a href="http://www.hkhotsun.com/sitemap.html" title="HOTSUN SiteMap">SiteMap</a>
         </div>
     </div>
+    #include("chat.html")
     <script src="#(CONTEXT_PATH)/static/js/jquery.min.js"></script>
     <script src="#(CONTEXT_PATH)/static/js/slider.js?v=1" type="text/javascript" charset="utf-8"></script>
     <script>
-
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");

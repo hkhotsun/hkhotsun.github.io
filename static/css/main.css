@@ -1,7 +1,7 @@
 .button {
-  background-color: #0062ad;
+  background-color: #d8d8d8;
   border: 0;
-  color: white;
+  color: #333;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -120,9 +120,9 @@
 .pro p {
   position: absolute;
   bottom: 0;
-  color: #fff;
+  color: #333;
   font-size: 16px;
-  background-color: #0062ad;
+  background-color: #c0c0c0;
   width: 240px;
   height: 50px;
   line-height: 50px;
@@ -175,23 +175,35 @@
   font-size: 16px;
   height: 50px;
   line-height: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid #e7e7e7;
   border-top: 0;
 }
 .pro_menu li.actived {
   margin-top: 15px;
   cursor: default;
-  height: 55px;
-  line-height: 55px;
+  height: 50px;
+  line-height: 50px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #1d8ed0;
+  background-color: #e5e5e5;
   border-radius: 5px 5px 0 0;
+  text-align: left;
+  padding-left: 10px;
+}
+.pro_menu li.item {
+  cursor: default;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 25px;
 }
 .pro_menu a {
   display: block;
   width: 200px;
-  height: 50px;
+  height: 35px;
+  font-size: 14px;
+  color: #808080;
 }
 .pro_menu a:hover {
   color: #e20101;
@@ -210,7 +222,7 @@
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  border-bottom: 2px solid #1d8ed0;
+  border-bottom: 2px solid #d0d0d0;
 }
 .pro_l {
   overflow: hidden;
@@ -273,17 +285,17 @@
 }
 .pagination li a:hover {
   background: #f5f5f5;
-  color: #09f;
+  color: #888;
 }
 .pagination li.thisclass {
-  background: #09f;
-  color: #fff;
+  background: #d0d0d0;
+  color: #333;
 }
 .pagination li.thisclass a,
 .pagination li.thisclass a:hover {
   background: transparent;
-  border-color: #09f;
-  color: #fff;
+  border-color: #d0d0d0;
+  color: #333;
   cursor: default;
 }
 .info {
@@ -306,7 +318,7 @@
   font-size: 24px;
   font-weight: bold;
   text-align: left;
-  border-bottom: 2px solid #1d8ed0;
+  border-bottom: 2px solid #d0d0d0;
 }
 .info_con {
   margin-top: 15px;
@@ -324,7 +336,7 @@
   line-height: 40px;
   font-size: 18px;
   text-align: left;
-  border-bottom: 2px solid #1d8ed0;
+  border-bottom: 2px solid #d0d0d0;
 }
 .int_text_c {
   margin-top: 20px;
@@ -364,13 +376,13 @@
   color: #5c5c5c;
 }
 .tabs li a:hover {
-  background: #0068b7;
-  color: #fff;
+  background: #d0d0d0;
+  color: #333;
 }
 .tabs .thistab,
 .tabs .thistab a {
-  background: #0068b7;
-  color: #fff;
+  background: #d0d0d0;
+  color: #333;
 }
 .tab_conbox {
   border-top: 0;
