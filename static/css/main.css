@@ -152,8 +152,7 @@
 }
 .tentp {
   background: url(../img/bg1.jpg) no-repeat;
-  height: 400px;
-  background-position: center;
+  background-size: 100% 100%;
 }
 .all_pro {
   margin-top: 20px;
