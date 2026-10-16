@@ -223,6 +223,14 @@
   text-align: center;
   border-bottom: 2px solid #d0d0d0;
 }
+.category_intro {
+  margin: 8px 0 22px;
+  padding: 14px 16px;
+  color: #4d4d4d;
+  background: #f7f7f7;
+  border-left: 3px solid #f39800;
+  line-height: 1.7;
+}
 .pro_l {
   overflow: hidden;
   margin-bottom: 20px;
