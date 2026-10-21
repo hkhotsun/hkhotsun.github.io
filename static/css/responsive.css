@@ -268,3 +268,403 @@ picture { display: inline-block; max-width: 100%; }
   .all_pro > .pro_list .pro_l > ul { display: grid !important; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 10px; box-sizing: border-box; }
   .all_pro > .pro_list .pro_l > ul > li { width: auto !important; height: auto; margin: 0 !important; min-width: 0; box-sizing: border-box; }
 }
+
+/* Homepage category cards: the four category items live inside .pro > ul. */
+.pro { height: auto !important; line-height: normal !important; width: 100%; }
+.pro > ul { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; width: 100%; margin: 0; padding: 0; list-style: none; }
+.pro > ul > li, .pro > ul > li:first-child { float: none !important; width: auto !important; min-width: 0; margin: 0 !important; height: auto; position: relative; overflow: hidden; }
+.pro > ul > li > a { display: block; width: 100%; position: relative; }
+.pro > ul > li picture { display: block; width: 100%; }
+.pro > ul > li img { display: block; width: 100%; height: auto; aspect-ratio: 238 / 416; object-fit: contain; }
+.pro > ul > li p { position: absolute; left: 0; right: 0; bottom: 0; width: 100% !important; height: auto; min-height: 46px; margin: 0; padding: 12px 6px; box-sizing: border-box; line-height: 1.4; text-align: center; overflow-wrap: anywhere; }
+@media (min-width: 761px) and (max-width: 1040px) { .pro > ul { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; } }
+@media (max-width: 760px) { .pro > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .pro > ul > li p { min-height: 40px; padding: 9px 5px; font-size: 14px; } }
+@media (max-width: 360px) { .pro > ul { gap: 8px; } .pro > ul > li p { font-size: 12px; } }
+
+
+/* Desktop homepage category layout override v4.
+   The homepage category cards are direct children of .pro > ul.
+   Keep the desktop row layout explicit and override legacy float/fixed widths. */
+@media screen and (min-width: 761px) {
+  .container > .pro {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 20px 0 50px !important;
+    padding: 0 !important;
+    line-height: normal !important;
+    box-sizing: border-box !important;
+  }
+  .container > .pro > ul {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    box-sizing: border-box !important;
+  }
+  .container > .pro > ul > li,
+  .container > .pro > ul > li:first-child {
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .container > .pro > ul > li > a {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .container > .pro > ul > li picture,
+  .container > .pro > ul > li img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+  }
+  .container > .pro > ul > li > a > p {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 46px !important;
+    margin: 0 !important;
+    padding: 12px 6px !important;
+    box-sizing: border-box !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 1100px) {
+  .container > .pro > ul { gap: 10px !important; }
+}
+@media screen and (max-width: 760px) {
+  .container > .pro > ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .container > .pro > ul > li,
+  .container > .pro > ul > li:first-child {
+    float: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* Homepage desktop layout v5: consistent three-column grid for category cards.
+   Use explicit selectors to override legacy float and fixed-width rules. */
+@media screen and (min-width: 761px) {
+  body .container .pro,
+  body .pro {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+  body .container .pro > ul,
+  body .pro > ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    list-style: none !important;
+  }
+  body .container .pro > ul > li,
+  body .container .pro > ul > li:first-child,
+  body .pro > ul > li,
+  body .pro > ul > li:first-child {
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  body .container .pro > ul > li > a,
+  body .pro > ul > li > a {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
+  body .container .pro > ul > li picture,
+  body .container .pro > ul > li img,
+  body .pro > ul > li picture,
+  body .pro > ul > li img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+  }
+  body .container .pro > ul > li > a > p,
+  body .pro > ul > li > a > p {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 46px !important;
+    margin: 0 !important;
+    padding: 12px 6px !important;
+    box-sizing: border-box !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+  }
+  /* Six service points form two rows of three on desktop. */
+  body .ser > ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px 18px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  body .ser > ul > li {
+    float: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+@media screen and (max-width: 760px) {
+  body .container .pro > ul,
+  body .pro > ul { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; }
+  body .ser > ul { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+}
+
+
+/* v6: robust homepage 3-column / 2-row layout for desktop.
+   The legacy stylesheet gives .pro a fixed height and line-height, which can
+   collapse/overflow the grid. Reset those properties on the homepage section. */
+@media screen and (min-width: 761px) {
+  html body .pro {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    line-height: normal !important;
+    margin: 20px 0 50px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+  html body .pro > ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    gap: 18px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    box-sizing: border-box !important;
+  }
+  html body .pro > ul > li,
+  html body .pro > ul > li:first-child {
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: normal !important;
+    border: 1px solid #ccc !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  html body .pro > ul > li > a {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .pro > ul > li picture,
+  html body .pro > ul > li img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
+    object-fit: contain !important;
+  }
+  html body .pro > ul > li > a > p {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 12px 6px !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+    background: #c0c0c0 !important;
+    color: #333 !important;
+    box-sizing: border-box !important;
+  }
+  html body .ser {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: auto !important;
+  }
+  html body .ser > ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, auto) !important;
+    gap: 12px 18px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  html body .ser > ul > li {
+    float: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 80px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+@media screen and (max-width: 760px) {
+  html body .pro { height: auto !important; line-height: normal !important; }
+  html body .pro > ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .pro > ul > li,
+  html body .pro > ul > li:first-child {
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  html body .pro > ul > li > a > p {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+  }
+}
+
+
+/* v7: service/advantages section — exactly three columns and two rows.
+   Keep the six benefits in a 3x2 grid on desktop and narrow screens. */
+html body .ser {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 20px 0 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+html body .ser > ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, minmax(80px, auto)) !important;
+  align-items: stretch !important;
+  gap: 12px 14px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  box-sizing: border-box !important;
+}
+html body .ser > ul > li {
+  float: none !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 80px !important;
+  margin: 0 !important;
+  padding: 12px 8px 12px 58px !important;
+  background-position: left center !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  box-sizing: border-box !important;
+}
+@media screen and (max-width: 760px) {
+  html body .ser > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, minmax(74px, auto)) !important;
+    gap: 8px 6px !important;
+  }
+  html body .ser > ul > li {
+    min-height: 74px !important;
+    padding: 8px 4px 8px 34px !important;
+    background-size: 30px auto !important;
+    background-position: left 6px center !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+  }
+}
