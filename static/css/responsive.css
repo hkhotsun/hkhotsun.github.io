@@ -1,0 +1,73 @@
+/* Responsive and rendering improvements — keeps the original Hotsun visual style. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { min-width: 0; overflow-wrap: break-word; }
+img, video, iframe { max-width: 100%; }
+img { height: auto; }
+.container, .inside { width: min(1000px, calc(100% - 32px)); max-width: 100%; }
+#nav .container { overflow: visible; }
+#nav ul { display: flex; flex-wrap: wrap; }
+#nav li { min-width: 0; }
+.flexslider { max-width: 100%; height: auto; aspect-ratio: 1920 / 400; }
+.flexslider .slides a img { width: 100%; height: 100%; object-fit: cover; }
+.pro { height: auto; line-height: normal; display: flex; flex-wrap: wrap; gap: 12px; }
+.pro li, .pro li:first-child { float: none; flex: 1 1 180px; width: auto; margin: 0; min-width: 0; }
+.pro li img { max-width: 100%; }
+.pro p { max-width: 100%; width: 100%; }
+.ser { height: auto; display: flex; flex-wrap: wrap; }
+.ser li { float: none; flex: 1 1 240px; margin-left: 0; max-width: 100%; }
+.all_pro { display: flex; align-items: flex-start; gap: 24px; }
+.pro_menu { flex: 0 0 200px; width: auto; min-width: 0; }
+.pro_menu a { max-width: 100%; }
+.pro_list { flex: 1 1 auto; width: auto; min-width: 0; margin-left: 0; }
+.pro_l { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px 14px; }
+.pro_l li, .pro_l li:nth-child(5n + 5) { float: none; width: auto; height: auto; min-width: 0; margin: 0; }
+.pro_l li img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.pro_l li p a { height: auto; min-height: 30px; line-height: 1.4; overflow-wrap: anywhere; }
+#footer, #footer_ied { min-width: 0; }
+#footer ul { max-width: 100%; }
+iframe { border: 0; }
+@media (max-width: 760px) {
+  body { font-size: 15px; text-align: left; }
+  .container, .inside { width: calc(100% - 28px); }
+  .inside { align-items: center; gap: 12px; }
+  .header { padding: 8px 0; }
+  .header-logo img { width: 72px; height: auto; }
+  .header-info { gap: 6px; min-width: 0; }
+  .wel { font-size: 12px; letter-spacing: 0; }
+  .tnav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 10px; }
+  .tnav li { margin: 0; }
+  .tnav svg { width: 18px; height: 18px; }
+  .tnav span { font-size: 12px; }
+  #nav ul { justify-content: center; padding: 0; }
+  #nav li { flex: 1 1 auto; text-align: center; }
+  #nav li a { display: block; padding: 10px 7px; }
+  .flexslider { margin-bottom: 24px; aspect-ratio: 2.4 / 1; }
+  .flexslider .slides a img { height: 100%; }
+  .pro { margin: 16px 0 28px; }
+  .pro li { flex-basis: calc(50% - 6px); }
+  .pro p { font-size: 14px; height: auto; min-height: 40px; line-height: 1.35; padding: 8px 4px; }
+  .all_pro { display: block; }
+  .pro_menu { float: none; width: 100%; }
+  .pro_menu ul { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pro_menu li, .pro_menu li.actived, .pro_menu li.item { height: auto; line-height: 1.4; margin: 0; padding: 8px 10px; border: 1px solid #e7e7e7; border-radius: 4px; font-size: 14px; }
+  .pro_menu a { width: auto; height: auto; line-height: 1.4; }
+  .pro_list { float: none; width: 100%; margin: 12px 0 0; }
+  .pro_t { height: auto; line-height: 1.4; padding: 10px 0; font-size: 20px; }
+  .pro_l { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+  .pagination li a { padding: 0 8px; font-size: 14px; }
+  .scroll { height: auto; line-height: 1.5; margin-bottom: 24px; }
+  #footer ul { float: none; margin: 12px 0; padding: 0; }
+  #footer li { margin: 6px 0; }
+  #footer_ied { height: auto; line-height: 1.5; padding: 12px 10px; }
+  .chat-widget { right: 10px; bottom: 16px; }
+}
+@media (max-width: 420px) {
+  .inside { align-items: flex-start; }
+  .header-logo img { width: 58px; }
+  .tnav span { overflow-wrap: anywhere; }
+  .pro li { flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
